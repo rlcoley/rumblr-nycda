@@ -1,0 +1,18 @@
+All my post
+
+<br>
+<br>
+
+<%@myblogs.last(20).reverse.each do |mb| %>
+ <div class=""><%#= index +1%> Title: <%= mb.title%></a> </div>
+ <div class=""> Content: <%= mb.content%> </div>
+ <br>
+ <hr style="width:80%; margin-right:20%;">
+<% end %>
+
+<br>
+<a href="/makepost"> <input type="submit" name="" value="Make Post"></a>
+
+<br>
+<br>
+<a href="/logout"> <input type="submit" name="" value="logout"></a>

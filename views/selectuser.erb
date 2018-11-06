@@ -1,0 +1,18 @@
+<%= @user.usersname %>'s Most Recent Post's
+<br>
+<br>
+
+<a href="/allblogs"> <input type="submit" name="" value="All Posts"></a>
+<br>
+<br>
+
+<% @user.blogs.last(20).reverse.each do |b| %>
+ <div class="">Title: <a href="#"><%= b.title%></a></div>
+ <div class=""> Content: <%= b.content%> </div>
+ <div class="">
+   <!-- By: <a href="/blogs/<%=b.id%>"><i><%#= b.user.usersname%></i></a> -->
+ </div>
+ <hr style="width:80%; margin-right:20%;">
+<% end %>
+ <br>
+ <a href="/logout"> <input type="submit" name="" value="logout"> </a>
